@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charSet="utf-8" />
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 300px;
+            overflow-x: hidden;
+            border: solid 1px #ccc;
+        }
+
+        .tips {
+            font-size: 16px;
+            color: #aaa;
+            text-align: center;
+            padding: 6px 0;
+            user-select: none;
+            border-bottom: solid 1px #aaa;
+        }
+
+        #linkList {
+            max-height: 500px;
+            padding: 2px 8px;
+        }
+
+        .link {
+            width: 360px;
+            position: relative;
+            margin-top: 2px;
+        }
+
+        .link:not(:last-child) {
+            border-bottom: dashed 1px #aaa;
+        }
+
+        .link .text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            line-height: 36px;
+            width: 316px;
+        }
+
+        .link .text span {
+            font-size: 16px;
+            user-select: all;
+        }
+
+        .link .icon {
+            display: inline-block;
+            background-color: white;
+            position: absolute;
+            right: 0;
+        }
+
+        .link .icon img {
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+        }
+
+        .link .icon img:hover {
+            cursor: pointer;
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tips">
+        <span>未发现m3u8请求</span>
+    </div>
+    <div id="linkList"></div>
+    <script type="text/javascript" src="popup.js"></script>
+</body>
+
+</html>
